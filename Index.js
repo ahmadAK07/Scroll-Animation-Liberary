@@ -1,4 +1,5 @@
-
+document.addEventListener("DOMContentLoaded", () => {
+    
     const elementsInView = new Set(); // Define the Set to track elements in view
 
     function setupObserver(elements, animationClass) {
@@ -36,4 +37,8 @@
     });
 
 
+    let animatedComps = document.querySelectorAll(".animated-comp");
 
+    setupObserver(animatedComps, "animate");
+
+})

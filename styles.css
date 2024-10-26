@@ -1,9 +1,10 @@
 *{padding: 0;margin: 0;box-sizing: border-box;}
-
+body{
+    background-color:#111;
+}
 .container, .hero{
     height: 100vh;
     width: 100vw;
-    border: 1px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,16 +15,49 @@
     font-size: 100px;
     align-content: center;
     text-align: center;
-    color: white;
+    color: #111;
     font-family: sans-serif;
+    text-shadow: 0px 0px 10px #eee;
     font-weight: 600;
-    background-color: red;
+    background-color: goldenrod;
+    box-shadow: inset 0px 0px 10px #eee,
+    0px 0px 10px rgba(218, 165, 32, .5);
+
+    border-radius: 4px;
 }
 
 .animated-comp{
-    transform:   translateX(-300%) translateY(100px) scale(.3);
+    transform:   translateX(-300%) translateY(100px) scaleY(.3);
     transition: all .4s;
 }
 .animated-comp.animate{
-    transform:  translateX(0px) translateY(0px) scale(1) rotate(360deg);
+    transform:  translateX(0px) translateY(0px) scaleY(1) ;
+}
+
+
+.footer{
+    height: 700px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    flex-direction: column;
+    gap: 40px;
+    font-family: sans-serif;
+    text-align: center;
+    animation: change  forwards;
+    animation-timeline: view();
+    animation-range: entry 60% cover 90%;
+}
+
+@keyframes change {
+    from{
+        background-color: white;
+        color: slateblue;
+    }
+    to{
+        background-color: slateblue;
+        color: white;
+    }
 }
